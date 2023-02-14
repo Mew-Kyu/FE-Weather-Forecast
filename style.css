@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("https://cdn.thoibaonganhang.vn/stores/news_dataimages/minhvl/062020/22/01/1344_a11b_Copy.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.container {
+    color: white;
+    background: linear-gradient(145deg, #414141, #000000);
+    width: 360px;
+    margin: 20px auto;
+    border-radius: 15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.search {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5%;
+    display: flex;
+    position: relative;
+    /* justify-content: center; */
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0;
+}
+
+.city-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 3px 3px 3px 20px;
+    background: transparent;
+    height: 25px;
+    color: white;
+}
+
+.city-input::placeholder {
+    color: lightgray;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-name {
+    font-size: 30px;
+    margin-bottom: 8px;
+    padding-top: 2%;
+}
+
+.temp {
+    font-size: 100px;
+    font-weight: lighter;
+    line-height: 1;
+    position: relative;
+}
+
+.temp::after {
+    content: "°C";
+    position: absolute;
+    font-size: 30px;
+}
+
+.weather-condition {
+    font-size: 18px;
+    padding-bottom: 5%;
+}
+
+#myChart {
+    padding: 10px;
+}
+
+.info-section {
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.row {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1px;
+}
+
+.forecast-section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forecast-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-data li, .forecast-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid lightgray;
+    font-size: 20px;
+}
+
+.forecast-label {
+    border-top: none;
+    font-size: 30px;
+    margin-bottom: 1px;
+}
+
+.forecast-label-title {
+    margin: 10px;
+    font-weight: bold;
+}
+

@@ -1,6 +1,6 @@
 # 🌤 Weather Forecast
 
-## 👨 About the project
+## About the project
 
 Using Weather API to create a web app shows the current weather and the weather forecast for the next days.
 

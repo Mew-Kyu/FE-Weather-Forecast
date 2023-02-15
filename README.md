@@ -1,6 +1,6 @@
 # 🌤 Weather Forecast
 
-## 👨‍💻 About the project
+## 👨 About the project
 
 Using Weather API to create a web app shows the current weather and the weather forecast for the next days.
 
@@ -11,7 +11,7 @@ Using Weather API to create a web app shows the current weather and the weather 
 <img width="144" alt="demo3" src="https://user-images.githubusercontent.com/53606646/218983124-310e9524-45c2-498a-aa1c-8fcd8f1b7ee4.png">
 <img width="144" alt="demo4" src="https://user-images.githubusercontent.com/53606646/218983147-a16a7e67-8d50-4fcf-a46d-64bb28e3cd67.png">
 
-## 🚀 Built with
+## Built with
 
 - HTML, CSS, Javascript
 - WeatherAPI

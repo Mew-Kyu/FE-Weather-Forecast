@@ -1,10 +1,11 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 body {
-    background-image: url("https://cdn.thoibaonganhang.vn/stores/news_dataimages/minhvl/062020/22/01/1344_a11b_Copy.jpg");
+    background-image: url("./images/bg.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -141,3 +142,21 @@ body {
     font-weight: bold;
 }
 
+
+@media only screen and (min-width: 768px) {
+    .forecast {
+        float: left;
+        width: 48%;
+        margin: 1%;
+        margin-top: 2.6%;
+    }
+    .container-right {
+        float: right;
+        clear: right;
+        width: 48%;
+        margin: 1%;
+    }
+    .main, .chart {
+        width: 100%;
+    }
+}

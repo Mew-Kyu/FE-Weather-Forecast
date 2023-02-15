@@ -1,6 +1,8 @@
 const apiID = "4a14a2e32f854b4cb9e31049230802";
 
 const cityInput = document.querySelector(".city-input");
+
+const localTime = document.querySelector(".localtime")
 const cityName = document.querySelector(".city-name");
 const weatherIcon = document.querySelector(".weather-icon");
 const temp = document.querySelector(".temp");
@@ -50,18 +52,19 @@ const myChart = new Chart(ctx, {
 });
 
 cityInput.addEventListener("change", (e) => {
-  fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiID}&q=${e.target.value}&days=10&aqi=no`)
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiID}&q=${e.target.value}&days=12&aqi=no`)
     .then(res => res.json())
     .then(data => {
-        console.log("Search input", data);
+        // console.log("Search input", data);
         cityName.innerHTML = data.location.name;
         weatherIcon.setAttribute('src', data.current.condition.icon);
         temp.innerHTML = Math.round(data.current.temp_c);
         weatherCon.innerHTML = data.current.condition.text;
+        localTime.innerHTML = data.location.localtime;
 
-        max.innerHTML = Math.round(data.forecast.forecastday[0].day.maxtemp_c) + "°C";
         min.innerHTML = Math.round(data.forecast.forecastday[0].day.mintemp_c) + "°C";
-        humidity.innerHTML = data.current.humidity + " %";
+        max.innerHTML = Math.round(data.forecast.forecastday[0].day.maxtemp_c) + "°C";
+        humidity.innerHTML = data.current.humidity + "%";
         wind.innerHTML = data.current.wind_kph + " km/h";
 
         // update chart data
@@ -78,17 +81,24 @@ cityInput.addEventListener("change", (e) => {
             forecastItems[i].querySelector('.min').textContent = Math.round(data.forecast.forecastday[i].day.mintemp_c) + "°";
             forecastItems[i].querySelector('.max').textContent = Math.round(data.forecast.forecastday[i].day.maxtemp_c) + "°";
         }
+        forecastItems.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            const selectedDay = data.forecast.forecastday[index];
+            myChart.data.labels = selectedDay.hour.map(hour => hour.time.slice(-5));
+            myChart.data.datasets[0].data = selectedDay.hour.map(hour => hour.temp_c);
+            myChart.update();
+          });
+        });
 
         // change background by city name
         if (screen.width < screen.height) {
-          console.log("mobile")
+          // console.log("mobile mode")
           document.body.style.backgroundImage = `url('https://source.unsplash.com/1080x1920/?${data.location.name}')`
         }
         else {
-          console.log("pc")
+          // console.log("pc mode")
           document.body.style.backgroundImage = `url('https://source.unsplash.com/1920x1080/?${data.location.name}')`
         }
-        
     })
     .catch(error => console.log(error));
 });

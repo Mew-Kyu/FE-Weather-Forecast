@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -22,21 +22,23 @@
                     <input type="text" name="city" class="city-input" placeholder="Enter the city name:">
                 </div>
                 <div class="overview">
+                    <!-- <p class="localtime"></p> -->
                     <p class="city-name">City Name</p>
                     <img class="weather-icon" src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
                     <p class="temp">--</p>
                     <p class="weather-condition">Weather condition</p>
+                    <p class="localtime">Time</p>
                 </div>
             </div>
             <div class="info-section">
                 <div class="row">
                     <div class="item">
-                        <div class="label">Max:</div>
-                        <div class="value max">--</div>
-                    </div>
-                    <div class="item">
                         <div class="label">Min:</div>
                         <div class="value min">--</div>
+                    </div>
+                    <div class="item">
+                        <div class="label">Max:</div>
+                        <div class="value max">--</div>
                     </div>
                 </div>
                 <div class="row">
@@ -123,9 +125,21 @@
                     <p class="min">--</p>
                     <p class="max">--</p>
                 </li>
+                <li>
+                    <p class="days">--</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
+                    <p class="min">--</p>
+                    <p class="max">--</p>
+                </li>
+                <li>
+                    <p class="days">--</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
+                    <p class="min">--</p>
+                    <p class="max">--</p>
+                </li>
             </ul>
         </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="./assets/script.js"></script>
 </html>
